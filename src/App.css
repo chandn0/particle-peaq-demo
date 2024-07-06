@@ -6,10 +6,10 @@
   height: 94vh;
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color: #f6f6f6;
+  background-color: #3a3636;
   box-shadow: 
   10px -10px 30px 5px #6666fe, /* soft blue glow on bottom right */
-  -10px 10px 30px 10px #ac2ce8; /* soft purple glow on top left */
+  10px -10px 30px 5px #6666fe; /* soft purple glow on top left */
 }
 
 .login-section {
