@@ -1,28 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { PeaqAgungTestnet } from '@particle-network/chains';
-import { AuthCoreContextProvider } from '@particle-network/auth-core-modal';
+import { Base,ArbitrumOne,Optimism, Solana,Polygon } from '@particle-network/chains';
+import { AuthCoreContextProvider,PromptSettingType } from '@particle-network/auth-core-modal';
+import { AuthType } from '@particle-network/auth-core';
 import App from './App';
 
 import('buffer').then(({ Buffer }) => {
   window.Buffer = Buffer;
 });
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <AuthCoreContextProvider
       options={{
-        projectId: process.env.REACT_APP_PROJECT_ID,
-        clientKey: process.env.REACT_APP_CLIENT_KEY,
-        appId: process.env.REACT_APP_APP_ID,
+        projectId: "b7c71a71-997e-4765-a56a-62c7e4c0214d",
+        clientKey: 'cZgJnecHZAyXRewgy3NWtMGEdgrUnxcfah6lI6qe',
+        appId: 'd62710ee-82d2-4399-81c5-a057d0424004',
+        authTypes: [AuthType.email, AuthType.google, AuthType.twitter],
+        themeType: 'dark',
+        fiatCoin: 'USD',
+        language: 'en',
         erc4337: {
-          name: "SIMPLE",
-          version: "1.0.0"
+          name: 'SIMPLE',
+          version: '1.0.0',
+        },
+        promptSettingConfig: {
+          promptPaymentPasswordSettingWhenSign: PromptSettingType.first,
+          promptMasterPasswordSettingWhenLogin: PromptSettingType.first,
         },
         wallet: {
           visible: true,
           customStyle: {
-            supportChains: [PeaqAgungTestnet]
+            supportChains: [Base,ArbitrumOne,Optimism, Solana,Polygon]
           }
         }
       }}
