@@ -4,7 +4,7 @@ import { AAWrapProvider, SmartAccount } from '@particle-network/aa';
 import { useEthereum, useConnect, useAuthCore,useSolana } from '@particle-network/auth-core-modal';
 import { ethers } from 'ethers';
 import { notification } from 'antd';
-import {WidgetPage} from "./swap";
+// import {WidgetPage} from "./Swap";
 
 import './App.css';
 
