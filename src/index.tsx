@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <AuthCoreContextProvider
       options={{
-        projectId: "b7c71a71-997e-4765-a56a-62c7e4c0214d",
+        projectId: "d62710ee-82d2-4399-81c5-a057d0424004",
         clientKey: 'cZgJnecHZAyXRewgy3NWtMGEdgrUnxcfah6lI6qe',
         appId: '1af9f2b9-2280-433c-bef3-58cc479f9255',
         authTypes: [AuthType.email, AuthType.google, AuthType.twitter],
