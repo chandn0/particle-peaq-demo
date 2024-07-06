@@ -65,12 +65,8 @@ const App = () => {
         }
     };
 
-
-
   return (
     <div className="App">
-
-        
 <main >
                 {connectionStatus !== 'connected' && (
                     <>
@@ -88,14 +84,11 @@ const App = () => {
                     </>
                 )}
 <address/>
-                
             </main>
                 {!userInfo ? ( <h4>Add ETH</h4>) :(<small>{balance} ETH</small>)
     }
-    <WidgetPage/>
-      </div>
-      
-      
+    {/* <WidgetPage/> */}
+      </div> 
   );
 };
 
