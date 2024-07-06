@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       options={{
         projectId: "b7c71a71-997e-4765-a56a-62c7e4c0214d",
         clientKey: 'cZgJnecHZAyXRewgy3NWtMGEdgrUnxcfah6lI6qe',
-        appId: 'd62710ee-82d2-4399-81c5-a057d0424004',
+        appId: '1af9f2b9-2280-433c-bef3-58cc479f9255',
         authTypes: [AuthType.email, AuthType.google, AuthType.twitter],
         themeType: 'dark',
         fiatCoin: 'USD',
