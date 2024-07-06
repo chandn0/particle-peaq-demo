@@ -20,6 +20,7 @@
     "vite": "^3.0.4"
   },
   "dependencies": {
+    "@lifi/widget": "^3.0.0",
     "@particle-network/aa": "latest",
     "@particle-network/auth": "latest",
     "@particle-network/auth-core": "latest",
