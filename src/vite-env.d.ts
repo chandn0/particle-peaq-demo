@@ -1,10 +1,10 @@
 /// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-    readonly VITE_APP_KEY: string
-    readonly VITE_CLIENT_KEY: string
-    readonly VITE_PROJECT_KEY: string
-    readonly VITE_MOBULA_KEY: string
+    readonly APP_KEY: string
+    readonly CLIENT_KEY: string
+    readonly PROJECT_KEY: string
+    readonly MOBULA_KEY: string
     // more env variables...
 }
 

@@ -32,9 +32,9 @@ const Balance: React.FC = () => {
   const { address, chainId, provider, sendTransaction, signMessage, signTypedData } = useEthereum();
   const { address: solanaAddress, signAndSendTransaction } = useSolana();
   const smartAccount = new SmartAccount(provider, {
-    projectId: import.meta.env.VITE_PROJECT_KEY,
-    clientKey: import.meta.env.VITE_CLIENT_KEY,
-    appId: import.meta.env.VITE_APP_KEY,
+    projectId: import.meta.env.PROJECT_KEY,
+    clientKey: import.meta.env.CLIENT_KEY,
+    appId: import.meta.env.APP_KEY,
     aaOptions: {
       accountContracts: {
         SIMPLE: [{ chainIds: [Base.id], version: '1.0.0' }],
