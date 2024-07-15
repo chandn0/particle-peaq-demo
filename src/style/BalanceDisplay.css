@@ -1,0 +1,14 @@
+.balance-display {
+    padding: 20px;
+  }
+  
+  .token-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .token-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }

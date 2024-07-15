@@ -12,9 +12,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <AuthCoreContextProvider
       options={{
-        projectId: "d62710ee-82d2-4399-81c5-a057d0424004",
-        clientKey: 'cZgJnecHZAyXRewgy3NWtMGEdgrUnxcfah6lI6qe',
-        appId: '1af9f2b9-2280-433c-bef3-58cc479f9255',
+        projectId: import.meta.env.VITE_PROJECT_KEY,
+        clientKey: import.meta.env.VITE_CLIENT_KEY,
+        appId: import.meta.env.VITE_APP_KEY,
         authTypes: [AuthType.email, AuthType.google, AuthType.twitter],
         themeType: 'dark',
         fiatCoin: 'USD',

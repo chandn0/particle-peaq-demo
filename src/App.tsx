@@ -5,21 +5,21 @@ import { useEthereum, useConnect, useAuthCore,useSolana } from '@particle-networ
 import { ethers } from 'ethers';
 import { notification } from 'antd';
 // import {WidgetPage} from "./Swap";
+import Balance from "./Balance";
 
 import './App.css';
 
 const App = () => {
 
   const { userInfo } = useAuthCore();
-
   const [balance, setBalance] = useState("...");
   const { connect, disconnect, connectionStatus } = useConnect();
   const { address, chainId, provider, sendTransaction, signMessage, signTypedData } = useEthereum();
   const { address: solanaAddress, signAndSendTransaction } = useSolana();
   const smartAccount = new SmartAccount(provider, {
-    projectId: "d62710ee-82d2-4399-81c5-a057d0424004",
-    clientKey: 'cZgJnecHZAyXRewgy3NWtMGEdgrUnxcfah6lI6qe',
-    appId: '1af9f2b9-2280-433c-bef3-58cc479f9255',
+    projectId: import.meta.env.VITE_PROJECT_KEY,
+    clientKey: import.meta.env.VITE_CLIENT_KEY,
+    appId: import.meta.env.VITE_APP_KEY,
     aaOptions: {
       accountContracts: {
         SIMPLE: [{ chainIds: [Base.id], version: '1.0.0' }],
@@ -87,6 +87,8 @@ const App = () => {
             </main>
                 {!userInfo ? ( <h4>Add ETH</h4>) :(<small>{balance} ETH</small>)
     }
+    <Balance />
+    {/* <BalanceDisplay/> */}
     {/* <WidgetPage/> */}
       </div> 
   );
